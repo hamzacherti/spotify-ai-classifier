@@ -5,8 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     spotify_client_id: str
     spotify_client_secret: str
-    spotify_redirect_uri: str = "http://127.0.0.1:8000/auth/callback"
-    gemini_api_key: str
+    spotify_redirect_uri: str = "https://spotify-ai-classifier-production.up.railway.app/auth/callback"    gemini_api_key: str
     gemini_model: str = "gemini-3.1-flash-lite"
     database_url: str = "sqlite:///./spotify_ai.db"
     session_secret: str
